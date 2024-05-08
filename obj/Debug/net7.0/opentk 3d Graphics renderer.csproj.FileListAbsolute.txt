@@ -60,3 +60,4 @@ C:\Users\Aezankhan Pathan\Desktop\opentk 3d Graphics renderer\obj\Debug\net7.0\r
 C:\Users\Aezankhan Pathan\Desktop\opentk 3d Graphics renderer\obj\Debug\net7.0\opentk 3d Graphics renderer.pdb
 C:\Users\Aezankhan Pathan\Desktop\opentk 3d Graphics renderer\obj\Debug\net7.0\opentk 3d Graphics renderer.genruntimeconfig.cache
 C:\Users\Aezankhan Pathan\Desktop\opentk 3d Graphics renderer\obj\Debug\net7.0\ref\opentk 3d Graphics renderer.dll
+C:\Users\Aezankhan Pathan\Desktop\opentk 3d Graphics renderer\obj\Debug\net7.0\opentk 3d Graphics renderer.sourcelink.json

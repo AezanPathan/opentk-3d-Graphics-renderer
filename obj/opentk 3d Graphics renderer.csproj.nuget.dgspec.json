@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj": {}
+    "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj": {
+    "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj",
+        "projectUniqueName": "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj",
         "projectName": "opentk 3d Graphics renderer",
-        "projectPath": "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj",
+        "projectPath": "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk 3d Graphics renderer\\opentk 3d Graphics renderer.csproj",
         "packagesPath": "C:\\Users\\Aezankhan Pathan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk\\opentk 3d Graphics renderer\\obj\\",
+        "outputPath": "C:\\Users\\Aezankhan Pathan\\Desktop\\opentk 3d Graphics renderer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aezankhan Pathan\\AppData\\Roaming\\NuGet\\NuGet.Config",

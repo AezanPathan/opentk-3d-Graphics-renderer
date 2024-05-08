@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("opentk 3d Graphics renderer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c775e0a779ce2cba01d7be0e23878f7ca28afbb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("opentk 3d Graphics renderer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("opentk 3d Graphics renderer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

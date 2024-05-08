@@ -11,16 +11,17 @@ using OpenTK.Windowing.GraphicsLibraryFramework;
 
 namespace opentk_3d_Graphics_renderer
 {
+
     internal class Window : GameWindow
     {
-
+        Camera cam = new Camera();
         float[] vertices =
         {
              0f,0.5f,0f,       /// top left vertex
             -0.5f,-0.5f,0f, /// bottom left vertex
              0.5f,-0.5f,0f /// bottom right vertex
         };
-      
+
         /// renderer piplnie variables
         int vao, shaderProgram;
 
@@ -49,26 +50,53 @@ namespace opentk_3d_Graphics_renderer
             vao = GL.GenVertexArray();
             int vbo = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ArrayBuffer, vbo);
-            GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length *sizeof(float), vertices,BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
 
             ///bind the vao
             GL.BindVertexArray(vao);
-            GL.VertexAttribPointer(0,3,VertexAttribPointerType.Float,false,0,0);
+            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, 0);
             GL.EnableVertexArrayAttrib(vao, 0);
-             
-            
+
+
             GL.BindBuffer(BufferTarget.ArrayBuffer, 0); /// unbind vbo
             GL.BindVertexArray(0); ///unbind the vao
+
+            ///create the shader program
+            shaderProgram = GL.CreateProgram();
+
+            int vertexShader = GL.CreateShader(ShaderType.VertexShader);
+            GL.ShaderSource(vertexShader, LoadShaderSource("Default.vert"));
+            GL.CompileShader(vertexShader);
+
+            int fragemntShader = GL.CreateShader(ShaderType.FragmentShader);
+            GL.ShaderSource(fragemntShader, LoadShaderSource("Default.frag"));
+            GL.CompileShader(fragemntShader);
+
+
+            GL.AttachShader(shaderProgram, vertexShader);
+            GL.AttachShader(shaderProgram, fragemntShader);
+
+            GL.LinkProgram(shaderProgram);
+
+            //delete the shaders
+            GL.DeleteShader(vertexShader);
+            GL.DeleteShader(fragemntShader);
         }
         protected override void OnUnload()
         {
             base.OnUnload();
+            GL.DeleteVertexArray(vao);
+            GL.DeleteProgram(shaderProgram);
         }
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             GL.ClearColor(0.5f, 0.5f, 0.5f, 1f);
             GL.Clear(ClearBufferMask.ColorBufferBit);
 
+            ///draw triangle
+            GL.UseProgram(shaderProgram);
+            GL.BindVertexArray(vao);
+            GL.DrawArrays(PrimitiveType.Triangles, 0, 3);
             Context.SwapBuffers();
             base.OnRenderFrame(args);
         }
@@ -84,7 +112,7 @@ namespace opentk_3d_Graphics_renderer
 
             try
             {
-                using (StreamReader reader = new StreamReader("../../../Shaders/" + filePath))
+                using (StreamReader reader = new StreamReader("../opentk 3d Graphics renderer/Shaders/" + filePath))
                 {
                     shaderSource = reader.ReadToEnd();
                 }
@@ -98,3 +126,4 @@ namespace opentk_3d_Graphics_renderer
         }
     }
 }
+// C:\Users\Aezankhan Pathan\Desktop\opentk 3d Graphics renderer\Shaders
